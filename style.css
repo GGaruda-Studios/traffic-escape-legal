@@ -1,0 +1,157 @@
+/* Block Puzzle Color Blast legal pages.
+   Colours follow the game's Home screen: a pale indigo page for light mode, the
+   game's deep indigo for dark mode. No webfont and no external request of any
+   kind - a privacy policy that asks a third party for a font is a contradiction,
+   and it is the sort of thing that has lost GDPR rulings. */
+
+:root {
+	--bg: #eef1ff;
+	--surface: #ffffff;
+	--inset: #e3e8fb;
+	--primary: #3160d8;
+	--text: #1f2a55;
+	--muted: #56608a;
+	--rule: #d3daf5;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #1d2a6b;
+		--surface: #26368a;
+		--inset: #17225a;
+		--primary: #ffc93a;
+		--text: #f2f5ff;
+		--muted: #bfd0ff;
+		--rule: #34479e;
+	}
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+	margin: 0;
+	padding: 0 16px 96px;
+	background: var(--bg);
+	color: var(--text);
+	font-family: ui-rounded, "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont,
+		"Helvetica Neue", Arial, sans-serif;
+	font-size: 17px;
+	line-height: 1.65;
+}
+
+main, header, footer { max-width: 40rem; margin: 0 auto; }
+
+header { padding: 48px 0 8px; }
+
+.eyebrow {
+	display: inline-block;
+	margin: 0 0 4px;
+	color: var(--muted);
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin: 8px 0 4px;
+	color: var(--primary);
+	font-size: 2rem;
+	line-height: 1.2;
+	font-weight: 800;
+}
+
+h2 {
+	margin: 40px 0 8px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+p, li { margin: 0 0 14px; }
+
+ul { padding-left: 1.25rem; }
+
+li { margin-bottom: 8px; }
+
+a {
+	color: var(--primary);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+}
+
+a:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+.meta {
+	margin: 0 0 8px;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+.package {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: 0.85em;
+	background: var(--inset);
+	padding: 1px 6px;
+	border-radius: 4px;
+}
+
+.lede {
+	background: var(--surface);
+	border: 1px solid var(--rule);
+	border-radius: 14px;
+	padding: 20px 22px 8px;
+	margin: 28px 0 8px;
+}
+
+.lede h2 { margin-top: 0; }
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--rule);
+	margin: 48px 0 24px;
+}
+
+footer {
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+footer a { color: var(--muted); }
+
+/* Landing page cards */
+.cards {
+	display: grid;
+	gap: 14px;
+	margin: 32px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.cards li { margin: 0; }
+
+.cards a {
+	display: block;
+	background: var(--surface);
+	border: 1px solid var(--rule);
+	border-radius: 14px;
+	padding: 20px 22px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.cards a:hover { border-color: var(--primary); }
+
+.cards strong {
+	display: block;
+	color: var(--primary);
+	font-size: 1.15rem;
+	margin-bottom: 2px;
+}
+
+.cards span { color: var(--muted); font-size: 0.95rem; }
