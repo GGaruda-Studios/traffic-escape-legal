@@ -51,7 +51,7 @@ game repo from `scripts/ui/legal_catalog.gd`, the same text the game shows under
 The app sends **anonymous usage data (Firebase Analytics)** only: level, hint, setting,
 look and rating-prompt events. In the EEA, UK and Switzerland (and where the device region
 is unknown) collection is off until the player switches on **Settings → Privacy & Terms →
-Share usage data**; elsewhere it is on, and anyone can switch it off. Advertising consent is
+Share usage data**, and only there does that switch appear; elsewhere it is always on. Advertising consent is
 always denied. It also uses Google Play's in-app update and in-app review prompts.
 No ads, purchases, accounts, crash reporting or Play Games.
 
